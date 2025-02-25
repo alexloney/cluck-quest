@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://dhm23uudkvwrc"]
+
+[node name="Chicken" type="AnimatedSprite2D"]
