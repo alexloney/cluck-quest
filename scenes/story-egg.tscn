@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://j1835gagbu7v"]
+
+[ext_resource type="Script" path="res://scripts/egg.gd" id="1_7xdf0"]
+[ext_resource type="Texture2D" uid="uid://ddpwvwdoh0wke" path="res://assets/sprites/egg.png" id="1_vh7mp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5v63b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_vh7mp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cbt75"]
+
+[node name="StoryEgg" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_7xdf0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_5v63b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_cbt75")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

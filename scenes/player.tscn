@@ -87,7 +87,8 @@ animations = [{
 radius = 13.0
 
 [node name="Player" type="CharacterBody2D"]
-z_index = 1
+z_index = 2
+collision_layer = 2
 script = ExtResource("1_pcoro")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
